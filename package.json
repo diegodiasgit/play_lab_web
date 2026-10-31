@@ -1,0 +1,22 @@
+{
+  "name": "albert_einstein_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:cli": "npx cypress run",
+    "test:open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "cypress": "^15.21.1",
+    "cypress-axe": "^1.7.0",
+    "cypress-mochawesome-reporter": "^5.0.0",
+    "typescript": "^7.0.2"
+  }
+}

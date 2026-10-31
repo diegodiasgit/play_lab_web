@@ -1,0 +1,24 @@
+name: PlayLab Cypress Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build # Caso tenha build, ou ajuste conforme projeto
+          browser: chrome
+          record: false # Atribuir true se usar Cypress Cloud para relatórios avançados
+        env:
+          # Evita conflitos de versão do electron/chrome
+          CYPRESS_CACHE_FOLDER: ~/.cache/Cypress

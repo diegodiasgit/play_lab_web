@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Relatórios de Testes e Screenshots gerados pelo Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Configurações locais de IDEs
+.vscode/
+.idea/
