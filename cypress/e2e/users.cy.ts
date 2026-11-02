@@ -4,7 +4,7 @@ describe('Jornada Principal - Gerenciamento de Usuários', () => {
   const usersPage = new UsersPage();
 
   beforeEach(() => {
-    usersPage.visit('/users');
+    usersPage.visit('/');
   });
 
   it('USR-01: Validar o carregamento da tabela de usuários', () => {

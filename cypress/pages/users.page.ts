@@ -1,9 +1,8 @@
 import { BasePage } from './base.page';
 
 export class UsersPage extends BasePage {
-  private tableRows = 'tr[data-testid="user-row"], tbody tr';
-  private searchInput = 'input[data-testid="search-user"], input[placeholder*="Pesquisar"]';
-  private noResultsMessage = 'text=Nenhum registro encontrado';
+  private tableRows = '#tableBody tr';
+  private searchInput = '#tableSearch';
 
   validateTableLoaded() {
     cy.get(this.tableRows).should('have.length.greaterThan', 0);
@@ -18,6 +17,6 @@ export class UsersPage extends BasePage {
   }
 
   validateNoResults() {
-    cy.get(this.noResultsMessage).should('be.visible');
+    cy.contains('Showing 1-0 of 0 entries').should('be.visible');
   }
 }

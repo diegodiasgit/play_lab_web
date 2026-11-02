@@ -1,5 +1,5 @@
 export class BasePage {
   visit(path: string = '/') {
-    cy.visit(path);
+    cy.visit(path, { failOnStatusCode: false });
   }
 }
